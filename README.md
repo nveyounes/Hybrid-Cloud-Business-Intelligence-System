@@ -33,27 +33,32 @@ The solution bridges local development environments with managed cloud services.
 
 ```mermaid
 graph LR
-    subgraph "Local Sources (macOS)"
-        A[MySQL DB\n(Clients Data)] --> C{ETL Layer}
-        B[JSON Files\n(Orders Data)] --> C
+    subgraph Local["Local Sources (macOS)"]
+        A[MySQL DB - Clients Data]
+        B[JSON Files - Orders Data]
     end
 
-    subgraph "ETL / Integration Layer"
-        C -->|Dimension Flow| D[Talend Open Studio]
-        C -->|Fact Flow (Batch)| E[Python Script\n(Pandas/Psycopg2)]
+    subgraph ETL["ETL / Integration Layer"]
+        D[Talend Open Studio]
+        E[Python Script - Pandas/Psycopg2]
     end
 
-    subgraph "Cloud Data Warehouse (AWS)"
-        D -->|SSL Connection| F[(Neon Serverless PostgreSQL)]
-        E -->|SSL Connection| F
+    subgraph Cloud["Cloud Data Warehouse (AWS)"]
+        F[(Neon Serverless PostgreSQL)]
     end
 
-    subgraph "Business Intelligence"
-        F -->|Native Connector| G[Google Looker Studio]
+    subgraph BI["Business Intelligence"]
+        G[Google Looker Studio]
     end
 
-    style F fill:#00bb77,stroke:#333,stroke-width:2px,color:white
-    style G fill:#4285F4,stroke:#333,stroke-width:2px,color:white
+    A -->|Dimension Flow| D
+    B -->|Fact Flow| E
+    D -->|SSL Connection| F
+    E -->|SSL Connection| F
+    F -->|Native Connector| G
+
+    style F fill:#00bb77,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#4285F4,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ### Data Flow:
