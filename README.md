@@ -125,8 +125,8 @@ You can replicate the ingestion of the "Orders" fact table using the provided sc
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/nveyounes/Hybrid-Cloud-Business-Intelligence-System.git
+   cd Hybrid-Cloud-Business-Intelligence-System
    ```
 
 2. **Install dependencies**
@@ -169,8 +169,7 @@ my-bi-project-repo/
 │   ├── create_tables.sql     
 │   └── randomize_dates.sql   
 │
-└── assets/                   # Images and diagrams
-    ├── architecture_diagram.png
+└── assets/                   # Images
     └── dashboard_screenshot.png
 ```
 
@@ -198,11 +197,10 @@ my-bi-project-repo/
 
 ## 👤 Author
 
-**[Your Name]**
+**[Younes Farhat]**
 
 * Data Engineering & BI Student
-* [LinkedIn Profile](https://linkedin.com/in/yourprofile)
-* [Portfolio Website](https://yourwebsite.com)
+* [LinkedIn Profile](https://www.linkedin.com/in/younes-farhat-4b97aa253/)
 
 ---
 
