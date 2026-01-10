@@ -195,14 +195,6 @@ my-bi-project-repo/
 
 ---
 
-## 👤 Author
-
-**[Younes Farhat]**
-
-* Data Engineering & BI Student
-* [LinkedIn Profile](https://www.linkedin.com/in/younes-farhat-4b97aa253/)
-
----
 
 ## 📄 License
 
